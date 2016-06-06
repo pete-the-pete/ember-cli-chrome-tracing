@@ -1,7 +1,7 @@
 {
-  "name": "ember-cli-performance-tracing",
+  "name": "ember-cli-chrome-tracing",
   "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "A wrapper around chrome-tracing. Provides a convenient and extensible way to measure and report chrome tracing data",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -41,7 +41,8 @@
     "ember-addon"
   ],
   "dependencies": {
-    "ember-cli-babel": "^5.1.5"
+    "ember-cli-babel": "^5.1.5",
+    "chrome-tracing": "0.3.1"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"
