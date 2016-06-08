@@ -1,5 +1,6 @@
 export function initialize() {
-  if(window.location && window.location.search.indexOf('initial-render') > 1) {
+  if(window.location && window.location.search === '?initial-render') {
+    console.log('burritos');
     (function () {
       var endTrace = function() {
         //just before paint
@@ -20,6 +21,6 @@ export function initialize() {
 }
 
 export default {
-  name: 'trace-initial-render',
+  name: 'initial-render',
   initialize: initialize
 };

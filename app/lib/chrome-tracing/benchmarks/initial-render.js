@@ -1,8 +1,9 @@
-import { InitialRenderBenchmark } from "chrome-tracing";
+"use strict";
+const InitialRenderBenchmark = require('chrome-tracing').InitialRenderBenchmark;
 
 let benchmark = new InitialRenderBenchmark({
   name: "app initial render",
-  url: "http://localhost:4200/",
+  url: "http://localhost:4200/?initial-render",
   endMarker: "renderEnd",
   browser: {
     type: "canary"
