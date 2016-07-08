@@ -1,3 +1,4 @@
+/* eslint-env node */
 "use strict";
 const InitialRenderBenchmark = require('chrome-tracing').InitialRenderBenchmark;
 
@@ -5,6 +6,7 @@ let benchmark = new InitialRenderBenchmark({
   name: "app initial render",
   url: "http://localhost:4200/?initial-render",
   endMarker: "renderEnd",
+  iterations: 10,
   browser: {
     type: "canary"
   }

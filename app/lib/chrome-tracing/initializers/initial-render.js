@@ -1,6 +1,5 @@
 export function initialize() {
   if(window.location && window.location.search === '?initial-render') {
-    console.log('burritos');
     (function () {
       var endTrace = function() {
         //just before paint
