@@ -1,4 +1,4 @@
-# Ember-cli-performance-tracing
+# Ember-cli-performance-tracing [![Build Status](https://travis-ci.org/pete-the-pete/ember-cli-chrome-tracing.svg?branch=master)](https://travis-ci.org/pete-the-pete/ember-cli-chrome-tracing)
 
 This README outlines the details of collaborating on this Ember addon.
 
