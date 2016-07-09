@@ -66,13 +66,19 @@ module.exports = {
       const childProcess = spawn('node', [this.benchmarkScript]);
 
       childProcess.stdout.on('data', (data) => {
-        if(data.meta) {
-          this.ui.writeLine(`${data}`);
+        const _data = JSON.parse(data.toString());
+        if(_data.meta) {
+          const util = require('util');
+          this.ui.write(util.inspect(_data, false, null));
         }
       });
 
       childProcess.stderr.on('data', (data) => {
         this.ui.writeLine(`benchmark error: ${data}`);
+      });
+
+      childProcess.on('close', (code) => {
+        process.exit(code);
       });
     }
   }
